@@ -103,19 +103,19 @@
           <span class="game-number">01</span>
           <div class="game-icon">🪙</div>
           <div><span>动作小游戏</span><h3>奶龙接金币</h3><p>左右移动奶龙，接住从天而降的快乐。</p></div>
-          <button type="button" disabled>正在搭建</button>
+          <button class="play-game" type="button" data-game="catch">开始接金币</button>
         </article>
         <article class="game-card game-mint">
           <span class="game-number">02</span>
           <div class="game-icon">🃏</div>
           <div><span>记忆小游戏</span><h3>奶龙翻翻乐</h3><p>找到藏在卡片背后的奶龙搭档。</p></div>
-          <button type="button" disabled>即将开放</button>
+          <button class="play-game" type="button" data-game="memory">开始翻牌</button>
         </article>
         <article class="game-card game-pink">
           <span class="game-number">03</span>
           <div class="game-icon">⚡</div>
           <div><span>反应小游戏</span><h3>奶龙反应力</h3><p>看到奶龙冒头，就用最快速度戳它。</p></div>
-          <button type="button" disabled>等待投币</button>
+          <button class="play-game" type="button" data-game="reaction">测试反应力</button>
         </article>
       </div>
     </section>
@@ -144,6 +144,43 @@
       <p>即将前往 <strong id="escort-name"></strong></p>
       <div class="escort-track"><i></i></div>
       <small>请坐稳，马上出发 · <button id="go-now" type="button">立即前往</button></small>
+    </div>
+  </div>
+
+  <div class="game-modal" id="game-modal" hidden aria-modal="true" role="dialog" aria-labelledby="game-modal-title">
+    <div class="game-shell">
+      <header class="game-shell-header">
+        <div><span>NAILONG ARCADE</span><h2 id="game-modal-title">奶龙小游戏</h2></div>
+        <button id="game-close" type="button" aria-label="关闭小游戏">×</button>
+      </header>
+
+      <section class="game-stage catch-stage" id="catch-game" hidden>
+        <div class="game-hud"><span>金币 <strong id="catch-score">0</strong></span><span>剩余 <strong id="catch-time">20</strong> 秒</span></div>
+        <div class="catch-field" id="catch-field">
+          <div class="catch-clouds" aria-hidden="true">☁　　☁　　　☁</div>
+          <div class="catch-player" id="catch-player"><img src="assets/nailong-static.png" alt="接金币的奶龙"><span></span></div>
+          <div class="game-curtain" id="catch-curtain">
+            <div class="curtain-icon">🪙</div><h3>奶龙接金币</h3>
+            <p>移动鼠标、手指或方向键接住金币，避开小炸弹。</p>
+            <button type="button" id="catch-start">开始游戏</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="game-stage memory-stage" id="memory-game" hidden>
+        <div class="game-hud"><span>步数 <strong id="memory-moves">0</strong></span><span>配对 <strong id="memory-pairs">0</strong>/6</span></div>
+        <div class="memory-board" id="memory-board"></div>
+        <div class="game-result" id="memory-result" hidden><span>🎉</span><h3>全部找到啦！</h3><p id="memory-summary"></p><button type="button" id="memory-restart">再玩一次</button></div>
+      </section>
+
+      <section class="game-stage reaction-stage" id="reaction-game" hidden>
+        <div class="game-hud"><span>轮次 <strong id="reaction-round">0</strong>/5</span><span>平均 <strong id="reaction-average">—</strong></span></div>
+        <button class="reaction-pad idle" id="reaction-pad" type="button">
+          <span class="reaction-face"><img src="assets/nailong-static.png" alt="奶龙"></span>
+          <strong id="reaction-message">点击开始测试</strong>
+          <small id="reaction-tip">变黄之前不要点哦</small>
+        </button>
+      </section>
     </div>
   </div>
 
