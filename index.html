@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="奶龙中心——收集奶龙、奶蛙主题网站的可爱网址导航。">
+  <meta name="theme-color" content="#ffd934">
+  <title>奶龙中心.com｜奶龙与奶蛙网址导航</title>
+  <link rel="icon" href="assets/nailong-static.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="奶龙中心首页">
+      <span class="brand-mark"><img src="assets/nailong-static.png" alt=""></span>
+      <span><b>奶龙中心</b><small>NAILONG CENTER</small></span>
+    </a>
+    <nav aria-label="主导航">
+      <a href="#directory">网址导航</a>
+      <a href="#games">小游戏</a>
+      <button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false">音效：关</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> 奶龙互联网中转站</p>
+        <h1 id="hero-title">今天想去哪个<br><em>奶龙宇宙？</em></h1>
+        <p class="hero-text">把散落在互联网里的奶龙、奶蛙主题网站装进一个软乎乎的入口。选好目的地，奶龙负责护送。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#directory">开始逛逛 <span>↓</span></a>
+          <button class="button secondary" id="random-site" type="button">随便送我一个</button>
+        </div>
+        <div class="hero-stats" aria-label="站点统计">
+          <div><strong id="site-count">30</strong><span>个可访问站点</span></div>
+          <div><strong>2</strong><span>个可爱宇宙</span></div>
+          <div><strong>∞</strong><span>点奶气</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="弹跳的奶龙和云朵">
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+        <span class="float-tag tag-one">可爱加载中</span>
+        <span class="float-tag tag-two">今日奶量 100%</span>
+        <div class="mascot-disc">
+          <span class="speed-line speed-one"></span>
+          <span class="speed-line speed-two"></span>
+          <img class="mascot-image" src="assets/nailong-static.png" alt="挥手的奶龙">
+          <span class="cloud cloud-one">☁</span>
+          <span class="cloud cloud-two">☁</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div>奶龙中心 · 奶蛙出没 · 快乐冲浪 · 奶龙护送 · 奶龙中心 · 奶蛙出没 · 快乐冲浪 · 奶龙护送 ·</div>
+    </section>
+
+    <section class="directory section" id="directory" aria-labelledby="directory-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> 奶龙雷达已启动</p>
+          <h2 id="directory-title">网址导航</h2>
+          <p>点击卡片后会进入护送动画，再前往对应网站。</p>
+        </div>
+        <button class="favorites-button" id="favorites-only" type="button" aria-pressed="false">☆ 只看收藏</button>
+      </div>
+
+      <div class="directory-tools">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="site-search" type="search" placeholder="搜索网站、学校或城市…" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+        <div class="filters" role="group" aria-label="网站分类">
+          <button class="active" type="button" data-filter="all">全部</button>
+          <button type="button" data-filter="奶龙">奶龙宇宙</button>
+          <button type="button" data-filter="奶蛙">奶蛙宇宙</button>
+        </div>
+      </div>
+
+      <div class="site-grid" id="site-grid" aria-live="polite"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span class="empty-mascot" aria-hidden="true">🐲</span>
+        <h3>这里暂时没有奶龙</h3>
+        <p>换个关键词再找找吧。</p>
+      </div>
+    </section>
+
+    <section class="games section" id="games" aria-labelledby="games-title">
+      <div class="section-heading games-heading">
+        <div>
+          <p class="eyebrow"><span></span> 游乐园施工中</p>
+          <h2 id="games-title">奶龙小游戏</h2>
+          <p>小游戏入口已经留好，下一阶段会陆续开放。</p>
+        </div>
+        <span class="construction-pill">COMING SOON</span>
+      </div>
+      <div class="game-grid">
+        <article class="game-card game-yellow">
+          <span class="game-number">01</span>
+          <div class="game-icon">🪙</div>
+          <div><span>动作小游戏</span><h3>奶龙接金币</h3><p>左右移动奶龙，接住从天而降的快乐。</p></div>
+          <button type="button" disabled>正在搭建</button>
+        </article>
+        <article class="game-card game-mint">
+          <span class="game-number">02</span>
+          <div class="game-icon">🃏</div>
+          <div><span>记忆小游戏</span><h3>奶龙翻翻乐</h3><p>找到藏在卡片背后的奶龙搭档。</p></div>
+          <button type="button" disabled>即将开放</button>
+        </article>
+        <article class="game-card game-pink">
+          <span class="game-number">03</span>
+          <div class="game-icon">⚡</div>
+          <div><span>反应小游戏</span><h3>奶龙反应力</h3><p>看到奶龙冒头，就用最快速度戳它。</p></div>
+          <button type="button" disabled>等待投币</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-mascot"><img src="assets/nailong-static.png" alt="奶龙"></div>
+    <div><strong>奶龙中心.com</strong><p>一个由爱好者整理的非官方网站导航。</p></div>
+    <p class="footer-note">本站与所列学校及相关角色版权方无官方关联<br>网站状态可能随时变化 · 请文明冲浪</p>
+  </footer>
+
+  <div class="escort" id="escort" hidden aria-live="assertive" aria-modal="true" role="dialog">
+    <button class="escort-close" id="escort-close" type="button" aria-label="取消跳转">×</button>
+    <div class="escort-center">
+      <div class="escort-scene">
+        <span class="escort-star star-one">✦</span><span class="escort-star star-two">★</span>
+        <span class="escort-cloud cloud-a">☁</span><span class="escort-cloud cloud-b">☁</span>
+        <div class="escort-vehicle">
+          <img src="assets/nailong-static.png" alt="挥手的奶龙正在护送">
+          <span class="cart">奶龙<br>快递</span>
+        </div>
+        <div class="road"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <p class="eyebrow"><span></span> NAILONG EXPRESS</p>
+      <h2>奶龙正在护送你</h2>
+      <p>即将前往 <strong id="escort-name"></strong></p>
+      <div class="escort-track"><i></i></div>
+      <small>请坐稳，马上出发 · <button id="go-now" type="button">立即前往</button></small>
+    </div>
+  </div>
+
+  <template id="site-card-template">
+    <article class="site-card">
+      <button class="favorite" type="button" aria-label="收藏网站">☆</button>
+      <button class="card-main" type="button">
+        <span class="site-index"></span>
+        <span class="site-icon"></span>
+        <span class="site-info"><span class="site-meta"></span><strong></strong><small></small></span>
+        <span class="site-arrow">↗</span>
+      </button>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
